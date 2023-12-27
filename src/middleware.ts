@@ -35,8 +35,6 @@ const rolesRedirect: Record<string, unknown> = {
 export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request });
 
-  console.log(token, "token");
-
   const { pathname } = request.nextUrl;
   const role = token?.role as string;
 

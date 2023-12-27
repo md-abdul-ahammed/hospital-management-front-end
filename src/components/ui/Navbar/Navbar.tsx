@@ -69,11 +69,11 @@ const Navbar = ({
           mode="horizontal"
           selectedKeys={[items.find((item) => item.href === pathname)?.key!]}
         >
-          {items.map((item) => (
+          {items.length > 0 ? items.map((item) => (
             <Menu.Item key={item.key}>
               <Link href={item.href}>{item.label}</Link>
             </Menu.Item>
-          ))}
+          )): null}
 
           {session ? (
             <Button onClick={() => signOut()} type="primary" className="ml-4">

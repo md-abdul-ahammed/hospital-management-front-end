@@ -13,7 +13,6 @@ const PublicCard = ({
   className?: string;
   navigateTo?: string;
 }) => {
-  console.log(title);
   return (
     <Space direction="vertical" size={16}>
       <Card hoverable={hoverable} title={title} className={className}>

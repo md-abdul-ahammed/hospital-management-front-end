@@ -4,7 +4,6 @@ import { revalidateTag } from "next/cache";
 // import { redirect } from "next/navigation";
 
 export const deleteDoctor = async (id: string) => {
-  console.log(id);
   const res = await fetch(`http://localhost:5000/api/v1/doctors/${id}`, {
     method: "DELETE",
   });
